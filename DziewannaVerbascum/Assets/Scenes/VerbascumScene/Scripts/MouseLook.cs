@@ -2,21 +2,18 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MouseLookScript : MonoBehaviour
+public class MouseLook : MonoBehaviour
 {
     public float mouseSensitivityFactor = 110.0F;
     public float pitch = 0.0F;
 
     public Transform player;
 
-    
-
     void Start()
     {
         Cursor.lockState = CursorLockMode.Locked;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float mouseXaxies = Input.GetAxis("Mouse X") * mouseSensitivityFactor * Time.deltaTime;

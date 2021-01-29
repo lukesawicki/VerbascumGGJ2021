@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovementScript : MonoBehaviour
+public class PlayerMovement : MonoBehaviour
 {
     public CharacterController playerController;
     public LayerMask groundLayerMask;

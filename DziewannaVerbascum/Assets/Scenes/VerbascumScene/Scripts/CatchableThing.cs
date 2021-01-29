@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ThingsGrabber : MonoBehaviour
+public class CatchableThing : MonoBehaviour
 {
     public Transform grabPlace;
 
@@ -12,7 +12,7 @@ public class ThingsGrabber : MonoBehaviour
         GetComponent<Rigidbody>().freezeRotation = true;
         //GetComponent<Rigidbody>().isKinematic = true;
         this.transform.position = grabPlace.position;
-        this.transform.parent = GameObject.Find("Grabber").transform;
+        this.transform.parent = GameObject.Find("Hand").transform;
     }
 
     void OnMouseUp()
