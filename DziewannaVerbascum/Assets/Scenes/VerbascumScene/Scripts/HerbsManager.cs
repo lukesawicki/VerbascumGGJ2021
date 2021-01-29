@@ -10,12 +10,17 @@ public class HerbsManager : MonoBehaviour
     // Start is called before the first frame update
     public void addHerb(GameObject herb)
     {
+        Debug.Log("Hwytam ziele");
         int dotPosition = herb.name.IndexOf(".");
         string herbName = herb.name.Substring(0, dotPosition);
 
         if (herbsBag.ContainsKey(herbName))
         {
             herbsBag[herb.tag]++;
+        }
+        else
+        {
+            herbsBag.Add(herb.tag, 1);
         }
 
         foreach (KeyValuePair<string, int> herbInBag in herbsBag)

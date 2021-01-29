@@ -7,9 +7,10 @@ public class ObjectsPicker : MonoBehaviour
     [SerializeField] private Material highlightedMaterial;
     [SerializeField] private Material originalMaterial;
     [SerializeField] private string pickableTag = "Pickable";
+    
 
     private Transform selectedObject;
-
+    Transform selectedObjectTransform = null;
 
     void Update()
     {
@@ -25,7 +26,8 @@ public class ObjectsPicker : MonoBehaviour
         RaycastHit raycastHit;
         if (Physics.Raycast(ray, out raycastHit))
         {
-            Transform selectedObjectTransform = raycastHit.transform;
+            //Transform selectedObjectTransform = raycastHit.transform;
+            selectedObjectTransform = raycastHit.transform;
 
             if (selectedObjectTransform.CompareTag(pickableTag))
             {
@@ -38,7 +40,10 @@ public class ObjectsPicker : MonoBehaviour
 
                 selectedObject = selectedObjectTransform;
             }
+            else
+            {
+                selectedObjectTransform = null;
+            }
         }
     }
-
 }
