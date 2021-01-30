@@ -15,35 +15,37 @@ public class ObjectsPicker : MonoBehaviour
     void Update()
     {
 
-        if (selectedObject != null)
-        {
-            Renderer renderer = selectedObject.GetComponent<Renderer>();
-            renderer.material = originalMaterial;
-            selectedObject = null;
-        }
+        //if (selectedObject != null)
+        //{
+        //    Renderer renderer = selectedObject.GetComponent<Renderer>();
+        //    renderer.material = originalMaterial;
+        //    selectedObject = null;
+        //}
 
-        Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-        RaycastHit raycastHit;
-        if (Physics.Raycast(ray, out raycastHit))
-        {
-            //Transform selectedObjectTransform = raycastHit.transform;
-            selectedObjectTransform = raycastHit.transform;
+        //Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        //RaycastHit raycastHit;
+        //if (Physics.Raycast(ray, out raycastHit))
+        //{
+        //    //Transform selectedObjectTransform = raycastHit.transform;
+        //    selectedObjectTransform = raycastHit.transform;
 
-            if (selectedObjectTransform.CompareTag(pickableTag))
-            {
-                Renderer selectedObjectRenderer = selectedObjectTransform.GetComponent<Renderer>();
-                originalMaterial = selectedObjectRenderer.material;
-                if (selectedObjectRenderer != null)
-                {
-                    selectedObjectRenderer.material = highlightedMaterial;
-                }
+        //    if (selectedObjectTransform.CompareTag(pickableTag))
+        //    {
+        //        Renderer selectedObjectRenderer = selectedObjectTransform.GetComponent<Renderer>();
+        //        originalMaterial = selectedObjectRenderer.material;
+        //        if (selectedObjectRenderer != null)
+        //        {
+        //            selectedObjectRenderer.material = highlightedMaterial;
+        //        }
 
-                selectedObject = selectedObjectTransform;
-            }
-            else
-            {
-                selectedObjectTransform = null;
-            }
-        }
+        //        selectedObject = selectedObjectTransform;
+        //    }
+        //    else
+        //    {
+        //        selectedObjectTransform = null;
+        //    }
+        //}
     }
+
+
 }

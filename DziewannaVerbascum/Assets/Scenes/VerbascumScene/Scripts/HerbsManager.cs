@@ -5,28 +5,14 @@ using UnityEngine;
 public class HerbsManager : MonoBehaviour
 {
 
-    //public int herbsCount = 0;
-    public Dictionary<string, int> herbsBag = new Dictionary<string, int>();
+    public int herbsCounter = 0;
+    public int MAX_HERBS = 5;
+
     // Start is called before the first frame update
-    public void addHerb(GameObject herb)
+    public void addHerb()
     {
-        Debug.Log("Hwytam ziele");
-        int dotPosition = herb.name.IndexOf(".");
-        string herbName = herb.name.Substring(0, dotPosition);
-
-        if (herbsBag.ContainsKey(herbName))
-        {
-            herbsBag[herb.tag]++;
-        }
-        else
-        {
-            herbsBag.Add(herb.tag, 1);
-        }
-
-        foreach (KeyValuePair<string, int> herbInBag in herbsBag)
-        {
-            Debug.Log(herbInBag.Key + ": " + herbInBag.Value);
-        }
+        herbsCounter++;
+        Debug.Log("Dodane: " + herbsCounter);
     }
     
 }
