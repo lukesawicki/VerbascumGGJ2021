@@ -3,17 +3,7 @@ guid: 80389ec3455a7ad43981f4560dfaa6e4
 ModelImporter:
   serializedVersion: 19301
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: Kartki
-    second: {fileID: 2100000, guid: 6c808adf61f481244a98b60b50980c87, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: "Ok\u0142adka2.001"
-    second: {fileID: 2100000, guid: 2b23a2a4c84401848a7d6b565e8985a8, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 1
     materialName: 0
