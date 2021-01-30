@@ -22,4 +22,10 @@ public class MainMenuController : MonoBehaviour
         Debug.Log("Exit");
         Application.Quit();
     }
+
+    public void credits()
+    {
+        SceneManager.LoadScene("CreditsScene", LoadSceneMode.Single);
+    }
+
 }
